@@ -226,7 +226,7 @@ export default class Storage {
       }
       return { syncId: id };
     }
-    throw new NotFoundError(JSON.stringify(params));
+    return null;
   }
   _loadMapItem(params) {
     let { ret, key, id, autoSync, batched, syncInBackground, syncParams } = params;
