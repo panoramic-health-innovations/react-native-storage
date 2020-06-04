@@ -193,7 +193,7 @@ export default class Storage {
       if (autoSync && this.sync[key]) {
         return this.sync[key]({ syncParams });
       }
-      throw new NotFoundError(JSON.stringify(params));
+      return null;
     }
     if (typeof ret === 'string') {
       ret = JSON.parse(ret);
